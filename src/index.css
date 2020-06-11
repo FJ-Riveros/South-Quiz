@@ -29,7 +29,7 @@ form {
   overflow: hidden;
   border-radius: 20px;
   max-width: 600px;
-  height: 80%;
+  height: 95%;
 }
 .Setting-title {
   font-size: 1.5rem;
@@ -78,6 +78,7 @@ hr {
 }
 
 .Buttons {
-  text-align: center;
+  display: block;
+  margin: 0 auto;
   margin-top: 15px;
 }

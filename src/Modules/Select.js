@@ -87,9 +87,9 @@ const MinimalSelect = (props) => {
           value={Difficulty}
           onChange={difficultyChange}
         >
-          <MenuItem value={"Easy"}>Easy</MenuItem>
-          <MenuItem value={"Medium"}>Medium</MenuItem>
-          <MenuItem value={"Hard"}>Hard</MenuItem>
+          <MenuItem value={"easy"}>Easy</MenuItem>
+          <MenuItem value={"medium"}>Medium</MenuItem>
+          <MenuItem value={"hard"}>Hard</MenuItem>
         </Select>
       </FormControl>
 
