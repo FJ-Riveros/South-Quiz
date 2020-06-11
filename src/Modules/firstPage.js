@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Select from "./Select";
 import StartButton from "./startButton";
+import Questions from "./Questions";
 
 const firstPage = (props) => {
   const {
@@ -10,6 +11,9 @@ const firstPage = (props) => {
     setDifficulty,
     Category,
     setCategory,
+    pregunta,
+    setStart,
+    start,
   } = props;
   return (
     <Fragment>
@@ -31,8 +35,9 @@ const firstPage = (props) => {
               />
             </div>
             <div className="Buttons">
-              <StartButton />
+              <StartButton setStart={setStart} start={start} />
             </div>
+            <Questions pregunta={pregunta} />
           </div>
         </form>
       </div>

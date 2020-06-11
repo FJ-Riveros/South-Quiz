@@ -15,10 +15,10 @@ const theme = createMuiTheme({
   },
 });
 
-function startButton() {
+function startButton({ setStart, start }) {
   return (
     <ThemeProvider theme={theme}>
-      <Button variant="contained" size="large">
+      <Button onClick={() => setStart(true)} variant="contained" size="large">
         Start
       </Button>
     </ThemeProvider>
