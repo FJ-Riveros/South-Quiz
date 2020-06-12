@@ -1,7 +1,8 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
 import FirstPage from "./Modules/firstPage";
 
 function App() {
+  //Questions from the API
   const [pregunta, setPregunta] = useState(0);
 
   //How many players
@@ -15,12 +16,16 @@ function App() {
   //Start Command
   const [start, setStart] = useState(false);
 
-  //Categories
-  const requestCategories = async () => {
-    const call = await fetch(`https://opentdb.com/api_category.php`);
-    const categories = await call.json();
-    console.log(categories);
-  };
+  //Categories select
+  useEffect(() => {
+    fetch(`https://opentdb.com/api_category.php`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+      });
+  }, []);
 
   //API Questions
   const requestData = async () => {
@@ -28,36 +33,15 @@ function App() {
       `https://opentdb.com/api.php?amount=10&difficulty=${Difficulty}&type=boolean`
     );
     const response = await data.json();
-    //setPregunta(response);
-    console.log(response);
+    setPregunta(response);
   };
 
-  useEffect(() => {
-    requestCategories();
-  }, []);
-
   {
-    if (start == true) {
+    if (start) {
       requestData();
+      setStart(false);
     }
   }
-  /*useEffect(() => {
-    {
-      console.log(Difficulty);
-    }
-    fetch(
-      `https://opentdb.com/api.php?amount=10&category=14&difficulty=${Difficulty}&type=boolean`
-    )
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setPregunta(data);
-      })
-      .catch(() => {
-        console.log("No funciona");
-      });
-  }, []);*/
 
   return (
     <FirstPage
