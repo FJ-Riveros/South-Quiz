@@ -5,7 +5,12 @@ const Questions = ({ pregunta }) => {
   <h2>Category ${pregunta[0].category}</h2>
   `;*/
 
-  return <Fragment>{console.log(pregunta)}</Fragment>;
+  return (
+    <>
+      {console.log(pregunta.results[1].question)}
+      <h1>Question</h1>
+    </>
+  );
 };
 
 export default Questions;

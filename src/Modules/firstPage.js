@@ -14,13 +14,13 @@ const firstPage = (props) => {
     pregunta,
     setStart,
     start,
+    loading,
   } = props;
   return (
     <Fragment>
       <div className="Title">Quiz Mania</div>
       <div className="container">
         <form>
-          {/*"onSubmit.... "*/}
           <h1>Settings</h1>
           <hr></hr>
           <div className="Settings-body">
@@ -37,10 +37,10 @@ const firstPage = (props) => {
             <div className="Buttons">
               <StartButton setStart={setStart} start={start} />
             </div>
-            <Questions pregunta={pregunta} />
           </div>
         </form>
       </div>
+      {!loading && <Questions pregunta={pregunta} />}
     </Fragment>
   );
 };
