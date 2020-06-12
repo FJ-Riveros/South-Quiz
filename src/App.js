@@ -10,11 +10,15 @@ function App() {
 
   //Difficulty selected
   const [Difficulty, setDifficulty] = useState("easy");
+
   //Question category
   const [Category, setCategory] = useState("Any");
 
   //Start Command
   const [start, setStart] = useState(false);
+
+  //API loading?
+  const [loading, setLoading] = useState(true);
 
   //Categories select
   useEffect(() => {
@@ -27,6 +31,9 @@ function App() {
       });
   }, []);
 
+  useEffect(() => {
+    init();
+  }, [start]);
   //API Questions
   const requestData = async () => {
     const data = await fetch(
@@ -34,14 +41,14 @@ function App() {
     );
     const response = await data.json();
     setPregunta(response);
+    setLoading(false);
   };
-
-  {
+  const init = async () => {
     if (start) {
       requestData();
       setStart(false);
     }
-  }
+  };
 
   return (
     <FirstPage
@@ -54,6 +61,7 @@ function App() {
       pregunta={pregunta}
       setStart={setStart}
       start={start}
+      loading={loading}
     />
   );
 }
