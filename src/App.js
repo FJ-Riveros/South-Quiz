@@ -34,6 +34,7 @@ function App() {
   useEffect(() => {
     init();
   }, [start]);
+
   //API Questions
   const requestData = async () => {
     const data = await fetch(
@@ -43,10 +44,11 @@ function App() {
     setPregunta(response);
     setLoading(false);
   };
+
   const init = async () => {
     if (start) {
       requestData();
-      setStart(false);
+      //setStart(false);
     }
   };
 
