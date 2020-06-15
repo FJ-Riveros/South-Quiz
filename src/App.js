@@ -48,7 +48,6 @@ function App() {
   const init = async () => {
     if (start) {
       requestData();
-      //setStart(false);
     }
   };
 
