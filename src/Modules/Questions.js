@@ -20,6 +20,7 @@ const Questions = ({ pregunta }) => {
   const prueba = async () => {
     if (answer == correctAnswer) {
       setPlayer1Points(player1Points + 1);
+      setAnswer("");
     }
   };
 
@@ -29,7 +30,10 @@ const Questions = ({ pregunta }) => {
         <main>
           <h1>Question {suma + 1}</h1>
           {correctAnswer}
+          {answer}
           {player1Points}
+          {suma}
+
           <hr></hr>
           <div className="Game-body">
             <div className="game-text">
@@ -38,21 +42,30 @@ const Questions = ({ pregunta }) => {
             <div className="game-buttons">
               <button
                 onClick={() => {
-                  setSuma(suma + 1);
                   setAnswer("True");
+                  if (suma < 9) {
+                    setTimeout(() => {
+                      setSuma(suma + 1);
+                    }, 100);
+                  }
                 }}
               >
                 True
               </button>
               <button
                 onClick={() => {
-                  setSuma(suma + 1);
                   setAnswer("False");
+                  if (suma < 9) {
+                    setTimeout(() => {
+                      setSuma(suma + 1);
+                    }, 100);
+                  } else {
+                    //Load module with Player results
+                  }
                 }}
               >
                 False
               </button>
-              {console.log(pregunta.results[0].correct_answer)}
             </div>
           </div>
         </main>
