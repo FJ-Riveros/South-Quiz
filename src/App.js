@@ -26,6 +26,9 @@ function App() {
   //Tracks the points for the player 1
   const [player1Points, setPlayer1Points] = useState(0);
 
+  //Tracks the points for the player 2
+  const [player2Points, setPlayer2Points] = useState(0);
+
   //Categories select
   useEffect(() => {
     fetch(`https://opentdb.com/api_category.php`)
@@ -73,6 +76,8 @@ function App() {
       setSuma={setSuma}
       player1Points={player1Points}
       setPlayer1Points={setPlayer1Points}
+      player2Points={player2Points}
+      setPlayer2Points={setPlayer2Points}
     />
   );
 }

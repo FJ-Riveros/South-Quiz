@@ -20,6 +20,8 @@ const firstPage = (props) => {
     setSuma,
     player1Points,
     setPlayer1Points,
+    player2Points,
+    setPlayer2Points,
   } = props;
 
   //Checks how many questions are answered ATM
@@ -63,9 +65,14 @@ const firstPage = (props) => {
             setSuma={setSuma}
             player1Points={player1Points}
             setPlayer1Points={setPlayer1Points}
+            player2Points={player2Points}
+            setPlayer2Points={setPlayer2Points}
           />
         ) : (
-          <Results player1Points={player1Points} />
+          <Results
+            player1Points={player1Points}
+            player2Points={player2Points}
+          />
         )
       ) : null}
     </>

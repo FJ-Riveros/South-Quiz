@@ -9,11 +9,11 @@ const Questions = (props) => {
   let correctAnswer = pregunta.results[suma].correct_answer;
 
   useEffect(() => {
-    prueba();
+    pointValidation();
   }, [answer]);
 
-  const prueba = () => {
-    if (answer == correctAnswer) {
+  const pointValidation = () => {
+    if (answer === correctAnswer) {
       setPlayer1Points(player1Points + 1);
       setAnswer("");
     }
