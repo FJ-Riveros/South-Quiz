@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-const Questions = ({ pregunta }) => {
-  //Tracks the question number
-  const [suma, setSuma] = useState(0);
-
+const Questions = (props) => {
+  const { pregunta, setSuma, suma, player1Points, setPlayer1Points } = props;
   //Tracks the answer from the user
   const [answer, setAnswer] = useState("");
-
-  //Tracks the points for the player 1
-  const [player1Points, setPlayer1Points] = useState(0);
 
   //Stores the correct answer for the actual question
   let correctAnswer = pregunta.results[suma].correct_answer;
@@ -17,7 +12,7 @@ const Questions = ({ pregunta }) => {
     prueba();
   }, [answer]);
 
-  const prueba = async () => {
+  const prueba = () => {
     if (answer == correctAnswer) {
       setPlayer1Points(player1Points + 1);
       setAnswer("");
@@ -43,10 +38,10 @@ const Questions = ({ pregunta }) => {
               <button
                 onClick={() => {
                   setAnswer("True");
-                  if (suma < 9) {
+                  if (suma <= 9) {
                     setTimeout(() => {
                       setSuma(suma + 1);
-                    }, 100);
+                    }, 50);
                   }
                 }}
               >
@@ -55,12 +50,10 @@ const Questions = ({ pregunta }) => {
               <button
                 onClick={() => {
                   setAnswer("False");
-                  if (suma < 9) {
+                  if (suma <= 9) {
                     setTimeout(() => {
                       setSuma(suma + 1);
-                    }, 100);
-                  } else {
-                    //Load module with Player results
+                    }, 50);
                   }
                 }}
               >

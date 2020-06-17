@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import FirstPage from "./Modules/firstPage";
 
 function App() {
+  //Tracks the question number
+  const [suma, setSuma] = useState(0);
+
   //Questions from the API
   const [pregunta, setPregunta] = useState(0);
 
@@ -19,6 +22,9 @@ function App() {
 
   //API loading?
   const [loading, setLoading] = useState(true);
+
+  //Tracks the points for the player 1
+  const [player1Points, setPlayer1Points] = useState(0);
 
   //Categories select
   useEffect(() => {
@@ -63,6 +69,10 @@ function App() {
       setStart={setStart}
       start={start}
       loading={loading}
+      suma={suma}
+      setSuma={setSuma}
+      player1Points={player1Points}
+      setPlayer1Points={setPlayer1Points}
     />
   );
 }

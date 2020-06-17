@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { useMinimalSelectStyles } from "@mui-treasury/styles/select/minimal";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -58,7 +58,7 @@ const MinimalSelect = (props) => {
   };
 
   return (
-    <Fragment>
+    <>
       <div className="Settings-Players">
         <label> Players</label>
         <FormControl>
@@ -108,7 +108,7 @@ const MinimalSelect = (props) => {
           <MenuItem value={"Science & Nature"}>Science and Nature</MenuItem>
         </Select>
       </FormControl>
-    </Fragment>
+    </>
   );
 };
 

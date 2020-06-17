@@ -1,7 +1,8 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Select from "./Select";
 import StartButton from "./startButton";
 import Questions from "./Questions";
+import Results from "./Results";
 
 const firstPage = (props) => {
   const {
@@ -15,9 +16,21 @@ const firstPage = (props) => {
     setStart,
     start,
     loading,
+    suma,
+    setSuma,
+    player1Points,
+    setPlayer1Points,
   } = props;
+
+  //Checks how many questions are answered ATM
+  //When the 10 question are answered it changes the component
+  let prueba = true;
+  if (suma >= 10) {
+    prueba = false;
+  }
+  console.log(suma);
   return (
-    <Fragment>
+    <>
       <div className="Title">Quiz Mania</div>
       {!start && (
         <div className="container">
@@ -42,8 +55,20 @@ const firstPage = (props) => {
           </main>
         </div>
       )}
-      {!loading && <Questions pregunta={pregunta} />}
-    </Fragment>
+      {!loading ? (
+        prueba ? (
+          <Questions
+            pregunta={pregunta}
+            suma={suma}
+            setSuma={setSuma}
+            player1Points={player1Points}
+            setPlayer1Points={setPlayer1Points}
+          />
+        ) : (
+          <Results player1Points={player1Points} />
+        )
+      ) : null}
+    </>
   );
 };
 
