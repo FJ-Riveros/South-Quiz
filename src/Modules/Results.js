@@ -18,12 +18,16 @@ const results = ({ player1Points, player2Points }) => {
   console.log(player2Points);
   return (
     <>
-      <h1>Resultados!!</h1>
-      <h3>
-        {!tie
-          ? `The ${winner} won with ${winnerPoints} correct answers`
-          : `Tie! Both players have ${winnerPoints} correct answers, try again!`}
-      </h3>
+      <h1>Results</h1>
+      <div className="container">
+        <div className="result-box">
+          <h3>
+            {!tie
+              ? `The ${winner} won with ${winnerPoints} correct answers`
+              : `Tie! Both players have ${winnerPoints} correct answers, try again!`}
+          </h3>
+        </div>
+      </div>
     </>
   );
 };

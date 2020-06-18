@@ -10,6 +10,7 @@ const Questions = (props) => {
     setPlayer2Points,
     player2Points,
   } = props;
+
   //Tracks the answer from the user
   const [answer, setAnswer] = useState("");
 
@@ -20,9 +21,10 @@ const Questions = (props) => {
     pointValidation();
   }, [answer]);
 
+  //Gives the point to a player if he answers correctly
   const pointValidation = () => {
     if (answer === correctAnswer) {
-      if (suma === 0 || suma === 2 || suma === 4 || suma === 6 || suma === 8) {
+      if (suma % 2 === 0) {
         setPlayer1Points(player1Points + 1);
       } else {
         setPlayer2Points(player2Points + 1);
@@ -34,9 +36,9 @@ const Questions = (props) => {
     <>
       <div className="container">
         <main>
+          <h1>{suma % 2 === 0 ? "Player 1 Answers!" : "Player2 Answers!"}</h1>
           <h1>Question {suma + 1}</h1>
           {correctAnswer}
-          {answer}
           {player1Points}
           {player2Points}
 
