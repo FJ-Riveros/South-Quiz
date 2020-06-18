@@ -9,11 +9,13 @@ const results = ({ player1Points, player2Points }) => {
     winnerPoints = player2Points;
   } else if (player1Points === player2Points) {
     tie = true;
+    winnerPoints = player1Points;
   } else {
     winner = "Player 1";
     winnerPoints = player1Points;
   }
-
+  console.log(player1Points);
+  console.log(player2Points);
   return (
     <>
       <h1>Resultados!!</h1>

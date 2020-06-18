@@ -26,9 +26,9 @@ const firstPage = (props) => {
 
   //Checks how many questions are answered ATM
   //When the 10 question are answered it changes the component
-  let prueba = true;
+  let results = false;
   if (suma >= 10) {
-    prueba = false;
+    results = true;
   }
   console.log(suma);
   return (
@@ -58,7 +58,7 @@ const firstPage = (props) => {
         </div>
       )}
       {!loading ? (
-        prueba ? (
+        !results ? (
           <Questions
             pregunta={pregunta}
             suma={suma}
