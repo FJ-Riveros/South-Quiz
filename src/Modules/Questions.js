@@ -9,6 +9,7 @@ const Questions = (props) => {
     setPlayer1Points,
     setPlayer2Points,
     player2Points,
+    Players,
   } = props;
 
   //Tracks the answer from the user
@@ -36,7 +37,13 @@ const Questions = (props) => {
     <>
       <div className="container">
         <main>
-          <h1>{suma % 2 === 0 ? "Player 1 Answers" : "Player 2 Answers"}</h1>
+          <h1>
+            {Players === 1
+              ? null
+              : suma % 2 === 0
+              ? "Player 1 Answers"
+              : "Player 2 Answers"}
+          </h1>
           <h1>Question {suma + 1}</h1>
           <hr></hr>
           <div className="Game-body">

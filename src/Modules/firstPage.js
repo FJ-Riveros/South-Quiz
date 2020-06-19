@@ -67,6 +67,7 @@ const firstPage = (props) => {
             setPlayer1Points={setPlayer1Points}
             player2Points={player2Points}
             setPlayer2Points={setPlayer2Points}
+            Players={Players}
           />
         ) : (
           <Results

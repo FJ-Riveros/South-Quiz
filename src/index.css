@@ -1,20 +1,25 @@
-body {
-  margin: 0;
+html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif, "Playfair Display", serif;
+  color: rgb(70, 69, 69);
+}
+
+body {
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
 }
 
 .Title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   padding: 1rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  font-family: "Playfair Display", serif;
+  font-family: "Playfair", serif;
+  color: rgb(255, 163, 57);
 }
 
 .container {
@@ -44,6 +49,7 @@ body {
   font-family: "Roboto Slab", serif;
   height: 40px;
   text-transform: uppercase;
+  color: rgb(255, 163, 57);
 }
 
 main {
@@ -98,11 +104,17 @@ main {
 }
 
 .game-buttons button {
+  color: rgb(255, 163, 57);
+  height: 30px;
   width: 40%;
   font-family: "Roboto Slab", serif;
   text-transform: uppercase;
 }
 
+.MuiButton-label {
+  color: rgb(255, 163, 57);
+  font-family: "Roboto Slab", serif;
+}
 .Settings-Players {
   display: flex;
   flex-direction: column;
@@ -127,10 +139,6 @@ label {
   border-color: red;
 }
 
-.MuiSelect-select.MuiSelect-select {
-  margin-right: 0px;
-}
-
 hr {
   width: 70%;
   height: 1px;
@@ -146,4 +154,8 @@ hr {
 
 .results-title {
   margin-top: 50px;
+}
+
+.MuiSelect-select.MuiSelect-select {
+  padding-right: 0px !important;
 }
