@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif, "Playfair Display", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
@@ -14,6 +14,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  font-family: "Playfair Display", serif;
 }
 
 .container {
@@ -24,10 +25,25 @@ body {
 }
 
 .result-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   background: whitesmoke;
   border-radius: 20px;
   height: 40%;
+  width: 70%;
   padding: 2rem;
+}
+
+.result-box h3 {
+  text-align: center;
+}
+
+.result-box button {
+  font-family: "Roboto Slab", serif;
+  height: 40px;
+  text-transform: uppercase;
 }
 
 main {
@@ -78,15 +94,22 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin-bottom: 35px;
 }
 
 .game-buttons button {
   width: 40%;
+  font-family: "Roboto Slab", serif;
+  text-transform: uppercase;
 }
 
 .Settings-Players {
   display: flex;
   flex-direction: column;
+}
+
+.Settings-Players label {
+  font-size: 22px;
 }
 
 h1 {
@@ -118,5 +141,9 @@ hr {
 .Buttons {
   display: block;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 50px;
+}
+
+.results-title {
+  margin-top: 50px;
 }

@@ -36,12 +36,8 @@ const Questions = (props) => {
     <>
       <div className="container">
         <main>
-          <h1>{suma % 2 === 0 ? "Player 1 Answers!" : "Player2 Answers!"}</h1>
+          <h1>{suma % 2 === 0 ? "Player 1 Answers" : "Player 2 Answers"}</h1>
           <h1>Question {suma + 1}</h1>
-          {correctAnswer}
-          {player1Points}
-          {player2Points}
-
           <hr></hr>
           <div className="Game-body">
             <div className="game-text">

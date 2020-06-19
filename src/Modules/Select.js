@@ -4,6 +4,7 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { makeStyles } from "@material-ui/core/styles";
 
 const MinimalSelect = (props) => {
   const {
@@ -72,7 +73,6 @@ const MinimalSelect = (props) => {
           >
             <MenuItem value={1}>1</MenuItem>
             <MenuItem value={2}>2</MenuItem>
-            <MenuItem value={3}>3</MenuItem>
           </Select>
         </FormControl>
       </div>
