@@ -1,7 +1,7 @@
 import React from "react";
 import Confetti from "./Confetti";
 
-const results = ({ player1Points, player2Points }) => {
+const results = ({ player1Points, player2Points, Players }) => {
   let winner = 0;
   let winnerPoints = 0;
   let tie = false;
@@ -30,7 +30,9 @@ const results = ({ player1Points, player2Points }) => {
         <div className="result-box">
           <h3>
             {!tie
-              ? `The ${winner} won with ${winnerPoints} correct answers!`
+              ? Players === 1
+                ? `You answered ${winnerPoints} questions correctly!`
+                : `The ${winner} won with ${winnerPoints} correct answers!`
               : `Tie! Both players have ${winnerPoints} correct answers, try again!`}
           </h3>
           <button onClick={() => reset()}>Play again!</button>

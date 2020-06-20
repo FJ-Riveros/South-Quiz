@@ -73,6 +73,7 @@ const firstPage = (props) => {
           <Results
             player1Points={player1Points}
             player2Points={player2Points}
+            Players={Players}
           />
         )
       ) : null}
