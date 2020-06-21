@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import base64 from "react-native-base64";
 
 const Questions = (props) => {
   const {
@@ -15,8 +16,9 @@ const Questions = (props) => {
   //Tracks the answer from the user
   const [answer, setAnswer] = useState("");
 
-  //Stores the correct answer for the actual question
-  let correctAnswer = pregunta.results[suma].correct_answer;
+  //Stores the correct answer for the actual question and decodes it
+  //to True or False
+  let correctAnswer = base64.decode(pregunta.results[suma].correct_answer);
 
   useEffect(() => {
     pointValidation();
@@ -50,7 +52,7 @@ const Questions = (props) => {
           <hr></hr>
           <div className="Game-body">
             <div className="game-text">
-              <h3>{pregunta.results[suma].question}</h3>
+              <h3>{base64.decode(pregunta.results[suma].question)}</h3>
             </div>
             <div className="game-buttons">
               <button

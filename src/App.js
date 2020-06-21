@@ -53,14 +53,15 @@ function App() {
     let data;
     if (Category === "Any") {
       data = await fetch(
-        `https://opentdb.com/api.php?amount=10&difficulty=${Difficulty}&type=boolean`
+        `https://opentdb.com/api.php?amount=10&difficulty=${Difficulty}&type=boolean&encode=base64`
       );
     } else {
       data = await fetch(
-        `https://opentdb.com/api.php?amount=10&difficulty=${Difficulty}&type=boolean&category=${Category}`
+        `https://opentdb.com/api.php?amount=10&difficulty=${Difficulty}&type=boolean&category=${Category}&encode=base64`
       );
     }
     const response = await data.json();
+    console.log(response);
     setPregunta(response);
     setLoading(false);
   };
