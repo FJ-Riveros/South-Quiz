@@ -25,7 +25,9 @@ const Questions = (props) => {
   //Gives the point to a player if he answers correctly
   const pointValidation = () => {
     if (answer === correctAnswer) {
-      if (suma % 2 === 0) {
+      if (Players === 1) {
+        setPlayer1Points(player1Points + 1);
+      } else if (suma % 2 === 0) {
         setPlayer1Points(player1Points + 1);
       } else {
         setPlayer2Points(player2Points + 1);
