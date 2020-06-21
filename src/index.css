@@ -13,7 +13,7 @@ body {
 }
 
 .Title {
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   padding: 1rem;
   display: flex;
   justify-content: flex-start;
@@ -158,4 +158,8 @@ hr {
 
 .MuiSelect-select.MuiSelect-select {
   padding-right: 0px !important;
+}
+
+.MinimalSelect-list-4 li.Mui-selected {
+  background: rgb(255, 163, 57) !important;
 }

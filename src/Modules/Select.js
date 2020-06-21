@@ -103,8 +103,9 @@ const MinimalSelect = (props) => {
           onChange={categoryChange}
         >
           <MenuItem value={"Any"}>Any</MenuItem>
-          <MenuItem value={"videoGames"}>Video Games</MenuItem>
-          <MenuItem value={"Science & Nature"}>Science and Nature</MenuItem>
+          <MenuItem value={"18"}>Computers</MenuItem>
+          <MenuItem value={"15"}>Video Games</MenuItem>
+          <MenuItem value={"23"}>History</MenuItem>
         </Select>
       </FormControl>
     </>

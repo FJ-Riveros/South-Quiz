@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import FirstPage from "./Modules/firstPage";
 
 function App() {
+  //Has the info from the API to create the categorys
+  const [categoryinfo, setCategoryInfo] = useState("");
+
   //Tracks the question number
   const [suma, setSuma] = useState(0);
 
@@ -36,6 +39,7 @@ function App() {
         return response.json();
       })
       .then((data) => {
+        setCategoryInfo(data);
         console.log(data);
       });
   }, []);
@@ -46,9 +50,16 @@ function App() {
 
   //API Questions
   const requestData = async () => {
-    const data = await fetch(
-      `https://opentdb.com/api.php?amount=10&difficulty=${Difficulty}&type=boolean`
-    );
+    let data;
+    if (Category === "Any") {
+      data = await fetch(
+        `https://opentdb.com/api.php?amount=10&difficulty=${Difficulty}&type=boolean`
+      );
+    } else {
+      data = await fetch(
+        `https://opentdb.com/api.php?amount=10&difficulty=${Difficulty}&type=boolean&category=${Category}`
+      );
+    }
     const response = await data.json();
     setPregunta(response);
     setLoading(false);
@@ -78,6 +89,7 @@ function App() {
       setPlayer1Points={setPlayer1Points}
       player2Points={player2Points}
       setPlayer2Points={setPlayer2Points}
+      categoryinfo={categoryinfo}
     />
   );
 }
