@@ -3,6 +3,7 @@ import Select from "./Select";
 import StartButton from "./startButton";
 import Questions from "./Questions";
 import Results from "./Results";
+import TransitionScreen from "./TransitionScreen";
 
 const firstPage = (props) => {
   const {
@@ -22,6 +23,10 @@ const firstPage = (props) => {
     setPlayer1Points,
     player2Points,
     setPlayer2Points,
+    transition,
+    setTransition,
+    setTransitionAnswer,
+    transitionAnswer,
   } = props;
 
   //Checks how many questions are answered ATM
@@ -59,16 +64,23 @@ const firstPage = (props) => {
       )}
       {!loading ? (
         !results ? (
-          <Questions
-            pregunta={pregunta}
-            suma={suma}
-            setSuma={setSuma}
-            player1Points={player1Points}
-            setPlayer1Points={setPlayer1Points}
-            player2Points={player2Points}
-            setPlayer2Points={setPlayer2Points}
-            Players={Players}
-          />
+          !transition ? (
+            <Questions
+              pregunta={pregunta}
+              suma={suma}
+              setSuma={setSuma}
+              player1Points={player1Points}
+              setPlayer1Points={setPlayer1Points}
+              player2Points={player2Points}
+              setPlayer2Points={setPlayer2Points}
+              Players={Players}
+              setTransition={setTransition}
+              transition={transition}
+              setTransitionAnswer={setTransitionAnswer}
+            />
+          ) : (
+            <TransitionScreen transitionAnswer={transitionAnswer} />
+          )
         ) : (
           <Results
             player1Points={player1Points}
@@ -77,6 +89,7 @@ const firstPage = (props) => {
           />
         )
       ) : null}
+      {console.log(transition)}
     </>
   );
 };

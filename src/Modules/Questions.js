@@ -11,6 +11,8 @@ const Questions = (props) => {
     setPlayer2Points,
     player2Points,
     Players,
+    setTransition,
+    setTransitionAnswer,
   } = props;
 
   //Tracks the answer from the user
@@ -27,6 +29,7 @@ const Questions = (props) => {
   //Gives the point to a player if he answers correctly
   const pointValidation = () => {
     if (answer === correctAnswer) {
+      setTransitionAnswer(true);
       if (Players === 1) {
         setPlayer1Points(player1Points + 1);
       } else if (suma % 2 === 0) {
@@ -56,26 +59,34 @@ const Questions = (props) => {
             </div>
             <div className="game-buttons">
               <button
-                onClick={() => {
+                onClick={async () => {
                   setAnswer("True");
+                  await pointValidation();
                   if (suma <= 9) {
+                    setTransition(true);
                     setTimeout(() => {
+                      setTransition(false);
                       setAnswer("");
                       setSuma(suma + 1);
-                    }, 100);
+                      setTransitionAnswer("");
+                    }, 500);
                   }
                 }}
               >
                 True
               </button>
               <button
-                onClick={() => {
+                onClick={async () => {
                   setAnswer("False");
+                  await pointValidation();
                   if (suma <= 9) {
+                    setTransition(true);
                     setTimeout(() => {
+                      setTransition(false);
                       setAnswer("");
                       setSuma(suma + 1);
-                    }, 100);
+                      setTransitionAnswer("");
+                    }, 500);
                   }
                 }}
               >
@@ -90,3 +101,5 @@ const Questions = (props) => {
 };
 
 export default Questions;
+
+//Fix the transition memory ISSUE

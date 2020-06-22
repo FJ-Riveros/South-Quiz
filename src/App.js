@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import FirstPage from "./Modules/firstPage";
 
 function App() {
-  //Has the info from the API to create the categorys
+  //Has the info from the API to create the categories
   const [categoryinfo, setCategoryInfo] = useState("");
 
   //Tracks the question number
@@ -31,6 +31,12 @@ function App() {
 
   //Tracks the points for the player 2
   const [player2Points, setPlayer2Points] = useState(0);
+
+  //Defines when to transition between the questions
+  const [transition, setTransition] = useState(false);
+
+  //Declares in the transition if the question was correctly answered or not
+  const [transitionAnswer, setTransitionAnswer] = useState("");
 
   //Categories select
   useEffect(() => {
@@ -61,7 +67,6 @@ function App() {
       );
     }
     const response = await data.json();
-    console.log(response);
     setPregunta(response);
     setLoading(false);
   };
@@ -91,6 +96,10 @@ function App() {
       player2Points={player2Points}
       setPlayer2Points={setPlayer2Points}
       categoryinfo={categoryinfo}
+      setTransition={setTransition}
+      transition={transition}
+      setTransitionAnswer={setTransitionAnswer}
+      transitionAnswer={transitionAnswer}
     />
   );
 }
