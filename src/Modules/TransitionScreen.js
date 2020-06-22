@@ -6,7 +6,6 @@ const transitionScreen = ({ transitionAnswer }) => {
     <>
       <div className="transition-container">
         <div className="transition">
-          {console.log(transitionAnswer)}
           <h2>{transitionAnswer ? "Correct!" : "Incorrect"}</h2>
         </div>
       </div>

@@ -69,7 +69,7 @@ const Questions = (props) => {
                       setAnswer("");
                       setSuma(suma + 1);
                       setTransitionAnswer("");
-                    }, 500);
+                    }, 750);
                   }
                 }}
               >
@@ -86,7 +86,7 @@ const Questions = (props) => {
                       setAnswer("");
                       setSuma(suma + 1);
                       setTransitionAnswer("");
-                    }, 500);
+                    }, 200000);
                   }
                 }}
               >

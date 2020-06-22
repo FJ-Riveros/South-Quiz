@@ -89,7 +89,6 @@ const firstPage = (props) => {
           />
         )
       ) : null}
-      {console.log(transition)}
     </>
   );
 };
