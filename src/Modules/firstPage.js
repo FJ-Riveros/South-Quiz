@@ -38,7 +38,7 @@ const firstPage = (props) => {
 
   return (
     <>
-      <div className="Title">Quiz Storm</div>
+      <div className="Title">South Quiz</div>
       {!start && (
         <div className="container">
           <main>
