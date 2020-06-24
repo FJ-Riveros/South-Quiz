@@ -35,10 +35,10 @@ const firstPage = (props) => {
   if (suma >= 10) {
     results = true;
   }
-  console.log(suma);
+
   return (
     <>
-      <div className="Title">Quiz Mania</div>
+      <div className="Title">Quiz Storm</div>
       {!start && (
         <div className="container">
           <main>

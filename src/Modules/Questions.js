@@ -86,7 +86,7 @@ const Questions = (props) => {
                       setAnswer("");
                       setSuma(suma + 1);
                       setTransitionAnswer("");
-                    }, 200000);
+                    }, 750);
                   }
                 }}
               >

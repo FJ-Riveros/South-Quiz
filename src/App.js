@@ -46,7 +46,6 @@ function App() {
       })
       .then((data) => {
         setCategoryInfo(data);
-        console.log(data);
       });
   }, []);
 

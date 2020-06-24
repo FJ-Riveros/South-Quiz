@@ -19,8 +19,7 @@ const results = ({ player1Points, player2Points, Players }) => {
     winner = "Player 1";
     winnerPoints = player1Points;
   }
-  console.log(player1Points);
-  console.log(player2Points);
+
   return (
     <>
       <div className="results-main">
