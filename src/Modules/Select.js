@@ -59,22 +59,20 @@ const MinimalSelect = (props) => {
 
   return (
     <>
-      <div className="Settings-Players">
-        <label> Players</label>
-        <FormControl>
-          <Select
-            disableUnderline
-            classes={{ root: minimalSelectClasses.select }}
-            MenuProps={menuProps}
-            IconComponent={iconComponent}
-            value={Players}
-            onChange={handleChange}
-          >
-            <MenuItem value={1}>1</MenuItem>
-            <MenuItem value={2}>2</MenuItem>
-          </Select>
-        </FormControl>
-      </div>
+      <label> Players</label>
+      <FormControl>
+        <Select
+          disableUnderline
+          classes={{ root: minimalSelectClasses.select }}
+          MenuProps={menuProps}
+          IconComponent={iconComponent}
+          value={Players}
+          onChange={handleChange}
+        >
+          <MenuItem value={1}>1</MenuItem>
+          <MenuItem value={2}>2</MenuItem>
+        </Select>
+      </FormControl>
 
       <label>Difficulty</label>
       <FormControl>

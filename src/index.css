@@ -245,3 +245,46 @@ main h3 {
     width: 50%;
   }
 }
+
+@media (min-width: 600px) {
+  .Title {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .Settings-Players {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+
+  .Settings-body {
+    max-width: none;
+    width: 80%;
+    text-align: center;
+    height: 80%;
+  }
+  main {
+    max-width: none;
+    width: 90%;
+  }
+
+  .MuiSelect-select {
+    width: 140px !important;
+  }
+
+  .Settings-Players label {
+    margin: 0px;
+    font-size: 25px;
+  }
+
+  main h1 {
+    font-size: 45px;
+  }
+
+  .MuiButton-containedSizeLarge {
+    font-size: 1.3rem !important;
+  }
+}
