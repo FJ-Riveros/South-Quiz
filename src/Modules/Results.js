@@ -30,7 +30,9 @@ const results = ({ player1Points, player2Points, Players }) => {
           <h3>
             {!tie
               ? Players === 1
-                ? `You answered ${winnerPoints} questions correctly!`
+                ? winnerPoints === 1
+                  ? `You answered ${winnerPoints} question correctly!`
+                  : `You answered ${winnerPoints} questions correctly!`
                 : `The ${winner} won with ${winnerPoints} correct answers!`
               : `Tie! Both players have ${winnerPoints} correct answers, try again!`}
           </h3>

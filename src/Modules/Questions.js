@@ -22,7 +22,7 @@ const Questions = (props) => {
   //Stores the correct answer for the actual question and decodes it
   //to True or False
   let correctAnswer = base64.decode(pregunta.results[suma].correct_answer);
-
+  console.log(correctAnswer);
   useEffect(() => {
     pointValidation();
   }, [answer]);
