@@ -56,7 +56,7 @@ const firstPage = (props) => {
                 />
               </div>
               <div className="Buttons">
-                <StartButton setStart={setStart} start={start} />
+                <StartButton setStart={setStart} />
               </div>
             </div>
           </main>

@@ -53,6 +53,10 @@ body {
   text-transform: uppercase;
   color: rgb(255, 163, 57);
   width: 45%;
+  font-size: 100%;
+  background-color: #ebebeb;
+  border: rgb(131, 131, 131) solid 1px;
+  border-radius: 5px;
 }
 
 main {
@@ -107,11 +111,15 @@ main {
 }
 
 .game-buttons button {
+  font-size: 100%;
   color: rgb(255, 163, 57);
   height: 35px;
   width: 40%;
   font-family: "Roboto Slab", serif;
   text-transform: uppercase;
+  background-color: #ebebeb;
+  border: rgb(131, 131, 131) solid 1px;
+  border-radius: 5px;
 }
 
 .MuiButton-label {
