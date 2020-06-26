@@ -52,7 +52,7 @@ const Questions = (props) => {
               ? "Player 1 Answers"
               : "Player 2 Answers"}
           </h1>
-          <h1>Question {suma + 1}</h1>
+          <h1 className="QuestionTitle">Question {suma + 1}</h1>
           <hr></hr>
           <div className="Game-body">
             <div className="game-text">
