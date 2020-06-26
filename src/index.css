@@ -274,6 +274,7 @@ main h3 {
     width: 80%;
     text-align: center;
     height: 80%;
+    max-width: 1250px;
   }
   main {
     max-width: none;
@@ -310,5 +311,22 @@ main h3 {
 
   .game-text h3 {
     font-size: 175%;
+  }
+
+  .result-box button {
+    width: 30%;
+  }
+
+  .result-box h3 {
+    font-size: 25px;
+  }
+
+  .results-title {
+    font-size: 30px;
+  }
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    .Settings-body {
+      width: 95%;
+    }
   }
 }
