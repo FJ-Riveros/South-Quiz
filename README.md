@@ -16,7 +16,7 @@ A Quiz mini game built in <a href="https://github.com/facebook/react">React <a> 
 After 3 months of self taught learning, i wanted to try if i could develop my first project and learn from it along the process. And here is the result!
 
 
-## Appareance
+## Appearance
 
 <p>
  <img align="left" src="src/img/Firstpage.PNG" width= "200" >
