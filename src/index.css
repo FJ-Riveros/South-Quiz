@@ -152,6 +152,10 @@ label {
   margin-top: 15px;
 }
 
+.jss4 li.Mui-selected {
+  background: rgb(255, 163, 57) !important;
+}
+
 .MuiFormControl-root {
   text-align: center;
   border-radius: 4px;
