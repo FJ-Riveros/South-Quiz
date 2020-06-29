@@ -1,15 +1,15 @@
 # South Quiz
 A Quiz mini game built in <a href="https://github.com/facebook/react">React <a> that consumes the *https://opentdb.com/* Rest API. The game contains the follow features:
 
-`-Single and Duo player mode.`
+`-Single and Duo player mode`
 
-`-Selectable difficulty.`
+`-Selectable difficulty`
 
-`-4 Question categories to choose from.`
+`-4 Question categories to choose from`
 
-`-Mobile first design.`
+`-Mobile first design`
 
-`-Totally responsive.`
+`-Totally responsive`
 
 
 ## Motivation
