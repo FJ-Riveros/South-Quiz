@@ -4,6 +4,7 @@ import StartButton from "./startButton";
 import Questions from "./Questions";
 import Results from "./Results";
 import TransitionScreen from "./TransitionScreen";
+import Logo from "./Github-Logo";
 
 const firstPage = (props) => {
   const {
@@ -38,7 +39,15 @@ const firstPage = (props) => {
 
   return (
     <>
-      <div className="Title">South Quiz</div>
+      <div className="Banner">
+        <div className="Title">South Quiz</div>
+        <div className="Github-Logo">
+          <a href="https://github.com/FJ-Riveros/Quiz-Game">
+            <Logo />
+          </a>
+        </div>
+      </div>
+
       {!start && (
         <div className="container">
           <main>

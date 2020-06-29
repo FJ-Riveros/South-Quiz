@@ -227,6 +227,21 @@ main h3 {
   height: 80vh;
 }
 
+.Banner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Github-Logo {
+  width: 20%;
+}
+
+.Github-Logo img {
+  width: 100%;
+  height: auto;
+  max-width: 145px;
+}
+
 @media (max-width: 374px) {
   .Title {
     justify-content: center;
@@ -236,6 +251,13 @@ main h3 {
   }
   .result-box button {
     width: 60%;
+  }
+  .Banner {
+    justify-content: center;
+  }
+
+  .Github-Logo {
+    margin-right: -60px;
   }
 }
 
@@ -323,6 +345,9 @@ main h3 {
 
   .results-title {
     font-size: 30px;
+  }
+  .Github-Logo {
+    width: auto;
   }
   @media (min-width: 1025px) and (max-width: 1200px) {
     .Settings-body {
